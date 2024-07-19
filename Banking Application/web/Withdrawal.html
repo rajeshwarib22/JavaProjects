@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Withdrawal Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Make Withdrawals</h1>
+        <br>
+        
+        <div title="makeWithdrawal">
+            <form action="MakeWithdrawal">
+                <label for="accNo">Account Number:  </label><br><input type="text" name="accNo" id="accNo"> <br><br>
+                <label for="withdrawalAmt">Withdrawal Amount:  </label><br><input type="text" name="withdrawalAmt" id="withdrawalAmt"><br><br> 
+                <label for="withdrawalTo">Withdrawal From:  </label><br><input type="text" name="withdrawalTo" id="withdrawalTo"> <br><br>
+                
+                
+                <input type="submit" value="Withdraw Request">
+            </form>
+        </div>
+        <br><br>
+        <div>
+            <button id="depositMenu" onclick="window.location.href = 'Deposit.html'" value="depositMenu">Go To Deposits</button>
+        </div>
+        <br><br>
+        <div>
+            <button id="mainMenu" onclick="window.location.href = 'index.html'" value="mainMenu">Go To Main Menu</button>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Dynamic Query</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="OUTPUT"></div>
+        <div id="INPUT">
+            <h2>Account Selection</h2>
+            <form id="form1">
+                <label for="acctNo">Select Account:</label>
+                <input type="text" id="acctNo" name="acctNo">
+            </form>
+            <br>            
+        </div>
+        <script>
+            document.getElementById("form1").addEventListener("input", function(event) {
+                var inputValue = event.target.value;
+                showAccount(inputValue);
+            });
+
+            function showAccount(inputValue){
+                const xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    var dynamicValues = xhr.responseText;
+                    dynamicDisplay(dynamicValues);
+                };
+                xhr.open("GET", "DynamicQuery?acctNo=" + encodeURIComponent(inputValue), true);
+                xhr.send();
+            }
+
+            function dynamicDisplay(dynamicValues){
+                document.getElementById("OUTPUT").innerHTML = dynamicValues;
+            }
+            
+        </script>
+        <div>
+            <button id="mainMenu" onclick="window.location.href = 'index.html'" value="mainMenu">Go To Main Menu</button>
+        </div>
+    </body>
+</html>

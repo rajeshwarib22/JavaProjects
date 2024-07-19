@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>BOL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Bank of Locklear Account Menu</h1>
+        <br>
+        <div title="buildAccount">
+            <h2>Build Account</h2>
+            <form action="BuildAccount">
+                <label for="accNo">Account Number:  </label><input type="text" id="accNo" name="accNo"> &nbsp;&nbsp;
+                <label for="taxIDNo">Tax ID Number:  </label><input type="text" id="taxIDNo" name="taxIDNo"> <br><br>
+                <label for="lname">Last name:  </label><input type="text" id="lname" name="lname"> &nbsp;&nbsp;
+                <label for="fname">First name:  </label><input type="text" id="fname" name="fname"> <br><br>
+                <label for="checkBalance">Checking Balance:  </label><input type="text" id="checkBalance" name="checkBalance"> &nbsp;&nbsp;
+                <label for="savingBalance">Savings Balance:  </label><input type="text" id="savingBalance" name="savingBalance"> &nbsp;&nbsp;
+                <label for="savingInterestRate">Savings Interest Rate:  </label><input type="text" id="savingInterestRate" name="savingInterestRate"><br><br>
+                
+                <input type="submit" value="Create Account">
+            </form>
+        </div>
+        <br>
+        <div title="queryAccounts">
+            <h2>Query Accounts</h2>
+            <button id="queryAccounts" onclick="window.location.href = 'Query.html'" value="queryAccounts">Go To Queries </button>
+        </div>
+        <br>
+        <div title="showAccount">
+            <h2>Show Account</h2>
+            <form action="ShowAccount">
+                <label for="findAccNo">Account Number:  <br></label><input type="text" id="findAccNo" name="findAccNo"> <br><br>
+                
+                <input type="submit" value="Show Account">
+            </form>
+        </div>
+        <br>
+        <div title="showAllAccounts">
+            <h2>Show All Accounts</h2>
+            <form action="ShowAllAccounts">
+                
+                <input type="submit" value="Show All Accounts">
+            </form>
+        </div>  
+        <br>
+        <div title="makeTransactions">
+            <h2>Make Transactions</h2>
+            <button id="depositMenu" onclick="window.location.href = 'Deposit.html'" value="depositMenu">Go To Deposits </button>
+            <br><br>
+            <button id="withdrawalMenu" onclick="window.location.href = 'Withdrawal.html'" value="withdrawalMenu">Go To Withdrawals</button>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Deposit Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Make Deposit</h1>
+        <br>
+        
+        <div title="makeDeposit">
+            <form action="MakeDeposit">
+                <label for="accNo">Account Number:  </label><br><input type="text" name="accNo" id="accNo"> <br><br>
+                <label for="depositAmt">Deposit Amount:  </label><br><input type="text" name="depositAmt" id="depositAmt"><br><br> 
+                <label for="depositTo">Deposit To:  </label><br><input type="text" name="depositTo" id="depositTo"> <br><br>
+                
+                
+                <input type="submit" value="Deposit Request">
+            </form>
+        </div>
+        <br><br>
+        <div>
+            <button id="withdrawalMenu" onclick="window.location.href = 'Withdrawal.html'" value="withdrawalMenu">Go To Withdrawals</button>
+        </div>
+        <br><br>
+        <div>
+            <button id="mainMenu" onclick="window.location.href = 'index.html'" value="mainMenu">Go To Main Menu</button>
+        </div>
+
+    </body>
+</html>
